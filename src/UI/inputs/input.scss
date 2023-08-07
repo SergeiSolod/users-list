@@ -1,0 +1,125 @@
+@import '../../assets/scss/helpers/variables-dk';
+
+.dk-input-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+.dk-input-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  input[data-empty='false'] + label,
+  input:focus + label {
+    top: 9px;
+    font-size: 13px;
+    line-height: 17px;
+    margin: 0;
+  }
+
+  input[data-datetime='true'] + label,
+  input:focus + label {
+    top: 9px;
+    font-size: 13px;
+    line-height: 17px;
+    margin: 0;
+  }
+}
+
+.dk-input {
+  height: 60px;
+  width: 100%;
+  padding: 29px 16px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: $PRIMARY_TEXT;
+  background-color: transparent;
+
+  &:hover {
+    ~ .dk-input-label {
+      opacity: 0.6;
+    }
+  }
+}
+
+.dk-input-label-n-placeholder {
+  top: 9px;
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0;
+}
+
+.dk-input-border-none {
+  border: none;
+}
+
+.dk-input-error {
+  label,
+  p,
+  span {
+    color: $ERROR_TEXT;
+  }
+
+  .dk-input {
+    border: 1px solid $ERROR_TEXT;
+    color: $ERROR_TEXT;
+  }
+}
+
+.dk-input-required {
+  label,
+  p {
+    color: $ERROR_TEXT;
+  }
+
+  .dk-input {
+    color: $ERROR_TEXT;
+  }
+}
+
+.dk-input-label {
+  cursor: text;
+  text-transform: lowercase;
+  color: $SECONDARY_TEXT;
+  position: absolute;
+  left: 17px;
+  top: 19px;
+  transition: all 300ms ease;
+}
+
+.dk-input-label.dk-input-disabled {
+  color: $LIGHT_TEXT;
+}
+
+.dk-input.dk-input-disabled {
+  color: $LIGHT_TEXT;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dk-input-description {
+  align-self: center;
+  text-align: center;
+  color: $SECONDARY_TEXT;
+  width: 100%;
+  padding: 10px 16px;
+}
+
+.dk-input-link {
+  font-weight: 500;
+  margin: 10px 16px 0;
+  color: $PRIMARY_TEXT;
+  transition: opacity 300ms ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

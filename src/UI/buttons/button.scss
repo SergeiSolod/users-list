@@ -1,0 +1,264 @@
+@import '../../assets/scss/helpers/variables-dk';
+
+.dk-button-fullwidth {
+  width: 100%;
+}
+
+.dk-button-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &_round {
+    width: 60px;
+  }
+}
+
+.dk-button-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dk-primary-button {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 60px;
+  width: 100%;
+  height: 60px;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid #000;
+  padding: 0;
+  margin: 0;
+}
+
+.dk-secondary-button {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 60px;
+  width: 100%;
+  height: 60px;
+  text-transform: lowercase;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0;
+  margin: 0;
+}
+
+.dk-design-button {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 60px;
+  width: 100%;
+  text-transform: lowercase;
+  color: #000;
+  border: none;
+}
+
+.dk-not-border-button {
+  border: none;
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.dk-disabled-button {
+  background-color: $DISABLED_COLOR;
+  border: 1px solid $DISABLED_COLOR;
+  color: #000;
+  cursor: default;
+
+  div {
+    opacity: 0.4;
+  }
+
+  &:hover {
+    div {
+      opacity: 0.4;
+    }
+  }
+
+  &:active {
+    transform: none;
+  }
+}
+
+.dk-button-description {
+  padding: 10px 16px;
+  text-align: center;
+  color: $SECONDARY_TEXT;
+}
+
+.dk-button-label {
+  text-align: center;
+  color: $PRIMARY_TEXT;
+  margin: 10px 16px 0;
+  font-weight: 500;
+
+  &_disabled {
+    color: $SECONDARY_TEXT;
+  }
+}
+
+.dk-button-margin {
+}
+
+.dk-button-icon-disabled {
+  &:active {
+    transform: none;
+  }
+}
+
+.dk-button-children-container {
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.dk-button-text-container {
+  font-weight: 500;
+  transition: transform 300ms ease;
+
+  .dk-button-children {
+    transition: opacity 300ms ease;
+  }
+
+  .dk-button-icon {
+    transition: opacity 300ms ease;
+  }
+
+  &:hover {
+    .dk-button-children {
+      opacity: 0.6;
+    }
+
+    .dk-button-icon {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.dk-button-children {
+  padding: 7px 14px 9px;
+  display: flex;
+  align-items: center;
+}
+
+.dk-button-round {
+  border-radius: 50%;
+  padding: 0;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  margin: 0;
+}
+
+.dk-extra-button-container {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 52px;
+
+  &_round {
+    width: 52px;
+  }
+
+  button {
+    border-radius: 100px;
+    height: 36px;
+    width: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dk-button-children {
+    min-height: 36px;
+  }
+}
+
+.dk-extra-secondary-button {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+}
+
+.dk-extra-primary-button {
+  min-width: 52px;
+}
+
+.dk-download-input {
+  display: none;
+}
+
+.dk-button-image-container {
+  height: 100px;
+  position: relative;
+  background-color: #fff;
+}
+
+.dk-button-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 100px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_actions {
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+
+  &_icon {
+    cursor: pointer;
+    height: 34px;
+    padding: 5px;
+    margin: 5px;
+    transition: opacity 300ms ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.dk-button-round {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

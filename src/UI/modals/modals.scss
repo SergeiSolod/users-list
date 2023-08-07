@@ -1,0 +1,65 @@
+@import '../../assets/scss/helpers/variables-dk';
+
+.dk-modal {
+  z-index: 10001;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: auto;
+  transform: translate(-50%, 20px);
+  padding: 32px 20px;
+  max-width: 681px;
+  width: 350px;
+  background-color: #fff;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 94%;
+
+  &-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &-subtitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    color: $SECONDARY_TEXT;
+  }
+
+  &-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 28px;
+    line-height: 20px;
+    color: $SECONDARY_TEXT;
+  }
+
+  &-buttons {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.dk-modal-background {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #8d8d8d;
+  opacity: 0.3;
+}
+
+@media (max-width: 370px) {
+  .dk-modal {
+    width: 100vw;
+  }
+}
